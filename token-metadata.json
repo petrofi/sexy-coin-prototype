@@ -1,0 +1,30 @@
+{
+  "name": "SEXY COIN",
+  "symbol": "SEXY",
+  "description": "Community-driven meme coin concept built in public.",
+  "image": "https://petrofi.github.io/sexy-coin-prototype/assets/token-logo-1024.png",
+  "external_url": "https://petrofi.github.io/sexy-coin-prototype/",
+  "attributes": [
+    {
+      "trait_type": "Network",
+      "value": "Local Validator Only"
+    },
+    {
+      "trait_type": "Decimals",
+      "value": "6"
+    },
+    {
+      "trait_type": "Test Supply",
+      "value": "1000000000"
+    }
+  ],
+  "properties": {
+    "category": "image",
+    "files": [
+      {
+        "uri": "https://petrofi.github.io/sexy-coin-prototype/assets/token-logo-1024.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}
