@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://petrofi.github.io/sexy-coin-prototype/sitemap.xml
