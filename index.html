@@ -37,7 +37,7 @@
       <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria="navLabel">
         <a href="#about" data-i18n="navAbout">The story</a>
         <a href="#tokenomics" data-i18n="navTokenomics">Tokenomics</a>
-        <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
+        <a href="#development-log" data-i18n="navLog">Build log</a>
         <a href="#security" data-i18n="navSecurity">Transparency</a>
       </nav>
       <div class="header-controls">
@@ -51,7 +51,7 @@
       <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" data-i18n-aria="mobileNavLabel" hidden>
         <a href="#about" data-i18n="navAbout">The story</a>
         <a href="#tokenomics" data-i18n="navTokenomics">Tokenomics</a>
-        <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
+        <a href="#development-log" data-i18n="navLog">Build log</a>
         <a href="#security" data-i18n="navSecurity">Transparency</a>
         <a href="#risk" data-i18n="navRisk">Read the risks</a>
       </nav>
@@ -65,7 +65,7 @@
           <p class="hero-description" data-i18n="heroDescription">Big personality. Zero promises. A Solana meme experiment with a neon heart and an open development journey.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#about"><span data-i18n="explore">Meet SEXY Coin</span><span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#roadmap"><span data-i18n="followBuild">Follow the build</span><span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#development-log"><span data-i18n="followBuild">Follow the build</span><span aria-hidden="true">→</span></a>
           </div>
           <p class="hero-note"><span aria-hidden="true">◇</span><span data-i18n="heroNote">Experimental project. No mainnet token. No sale.</span></p>
         </div>
@@ -130,24 +130,77 @@
         </ol>
       </section>
 
+      <section id="development-log" class="build-log section-wrap section-space" aria-labelledby="log-title">
+        <div class="section-index"><span>04 /</span><span data-i18n="logIndex">THE DEVELOPMENT RECORD</span></div>
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="logEyebrow">SIX STEPS. CLEAR NETWORK BOUNDARIES.</p><h2 id="log-title" data-i18n="logHeading">Development log.</h2></div><span class="outline-badge">MAINNET: NO-GO</span></div>
+        <p class="section-intro" data-i18n="logIntro">What was built, where it was tested, and what remains blocked. These are development milestones, not a launch announcement.</p>
+        <ol class="build-log-list">
+            <li class="log-card" data-day="01">
+              <div class="log-card-top"><span class="log-day">DAY 01</span><span class="log-status" data-i18n="log01Status">Foundation</span></div>
+              <h3 data-i18n="log01Title">Project foundation</h3>
+              <p data-i18n="log01Body">Approved mascot assets, a bilingual website and project safety boundaries were prepared.</p>
+              <p class="log-scope" data-i18n="log01Scope">Brand and website work. No token deployment.</p>
+            </li>
+<li class="log-card" data-day="02">
+              <div class="log-card-top"><span class="log-day">DAY 02</span><span class="log-status" data-i18n="log02Status">Tooling</span></div>
+              <h3 data-i18n="log02Title">Solana CLI installed</h3>
+              <p data-i18n="log02Body">Solana CLI and SPL Token CLI were installed and checked. Faucet limits prevented Devnet funding.</p>
+              <p class="log-scope" data-i18n="log02Scope">Tools installed. No public Devnet mint or transfer.</p>
+            </li>
+<li class="log-card" data-day="03">
+              <div class="log-card-top"><span class="log-day">DAY 03</span><span class="log-status" data-i18n="log03Status">Blocked</span></div>
+              <h3 data-i18n="log03Title">Devnet funding blocked</h3>
+              <p data-i18n="log03Body">Free funding methods were investigated. No usable Devnet SOL was obtained; deployment stayed blocked.</p>
+              <p class="log-scope" data-i18n="log03Scope">Investigation only. No public token created.</p>
+            </li>
+<li class="log-card" data-day="04">
+              <div class="log-card-top"><span class="log-day">DAY 04</span><span class="log-status" data-i18n="log04Status">Local verified</span></div>
+              <h3 data-i18n="log04Title">Local mint &amp; transfer verified</h3>
+              <p data-i18n="log04Body">One billion test tokens with 6 decimals were minted; a 100-token transfer finalized on an isolated local validator.</p>
+              <p class="log-scope" data-i18n="log04Scope">LOCAL VALIDATOR ONLY. The DAY 04 mint has no on-chain name, symbol or mascot metadata.</p>
+            </li>
+<li class="log-card" data-day="05">
+              <div class="log-card-top"><span class="log-day">DAY 05</span><span class="log-status" data-i18n="log05Status">Local verified</span></div>
+              <h3 data-i18n="log05Title">Local Metaplex metadata verified</h3>
+              <p data-i18n="log05Body">Name, symbol and metadata URI were verified with Metaplex on a separate isolated local test mint.</p>
+              <p class="log-scope" data-i18n="log05Scope">Separate local ledger and mint. Not the DAY 04 mint, public Devnet or Mainnet.</p>
+            </li>
+<li class="log-card" data-day="06">
+              <div class="log-card-top"><span class="log-day">DAY 06</span><span class="log-status" data-i18n="log06Status">NO-GO</span></div>
+              <h3 data-i18n="log06Title">Mainnet feasibility reviewed</h3>
+              <p data-i18n="log06Body">Costs, name collisions and launch gates were reviewed. Authority tests used a new disposable local mint.</p>
+              <p class="log-scope" data-i18n="log06Scope">Mainnet: NO-GO. No sale, liquidity or public deployment.</p>
+            </li>
+        </ol>
+        <p class="log-snapshot" data-i18n="logSnapshot">Historical evidence snapshot: DAY 01–06. Last recorded Devnet balance: 0 lamports / 0 SOL, finalized, 27 Oct 2026 at 13:02 +03. No live balance feed.</p>
+        <aside class="launch-gates" aria-labelledby="gates-title">
+          <h3 id="gates-title" data-i18n="gateHeading">Mainnet remains NO-GO.</h3>
+          <p data-i18n="gateIntro">No Mainnet token, token sale or fundraising from this project. These conditions remain unresolved:</p>
+          <ul><li data-i18n="gateFunding">Verified funding</li><li data-i18n="gatePublic">Public-network testing</li><li data-i18n="gateLegal">Legal compliance review</li><li data-i18n="gateBrand">Trademark and mascot rights review</li><li data-i18n="gateAuthority">Final authority and allocation policy</li><li data-i18n="gateLiquidity">Liquidity and security plan</li></ul>
+          <p data-i18n="logAuthority">The original DAY 04 and DAY 05 mints are unchanged. Their active mint authorities mean the observed one-billion supply is not an enforced fixed cap. Allocation and vesting ideas remain unimplemented drafts.</p>
+        </aside>
+        <p class="log-identity" data-i18n="logIdentity">Our identifiers here are darklove, this project website and the approved pink-haired mascot. Existing tokens use the same name or symbol; no affiliation or exclusive trademark rights are claimed. The mascot is a visual cue, not proof of token ownership or safety.</p>
+        <a class="text-link log-risk-link" href="#risk" data-i18n="logRiskLink">Read the risk disclosure</a>
+      </section>
+
       <section id="security" class="security section-wrap section-space" aria-labelledby="security-title">
-        <div class="section-index"><span>04 /</span><span data-i18n="securityIndex">THE NON-NEGOTIABLES</span></div>
+        <div class="section-index"><span>05 /</span><span data-i18n="securityIndex">THE NON-NEGOTIABLES</span></div>
         <div class="security-layout"><div class="security-copy"><span class="security-symbol" aria-hidden="true">◇</span><p class="eyebrow" data-i18n="securityEyebrow">SECURITY & TRANSPARENCY</p><h2 id="security-title"><span data-i18n="securityHeadingOne">Good vibes.</span><br><span class="pink-text" data-i18n="securityHeadingTwo">Clear boundaries.</span></h2><p data-i18n="securityIntro">Trust comes from what can be checked. Here is where the project actually stands.</p></div>
         <dl class="transparency-list">
           <div><dt><span aria-hidden="true">↗</span><span data-i18n="security1Title">Development stage</span></dt><dd data-i18n="security1Body">Local blockchain prototype complete. Minting and a 100-token transfer were finalized locally. Public Devnet is pending; mainnet has not launched.</dd></div>
-          <div><dt><span aria-hidden="true">↗</span><span data-i18n="security2Title">Your wallet stays yours</span></dt><dd data-i18n="security2Body">This website does not connect wallets, accept funds or collect personal data. No analytics or tracking scripts.</dd></div>
-          <div><dt><span aria-hidden="true">↗</span><span data-i18n="security3Title">Authorities, disclosed</span></dt><dd data-i18n="security3Body">The DAY 04 local mint and freeze authorities were verified and remain developer-controlled. No authority changes or revocations were performed.</dd></div>
+          <div><dt><span aria-hidden="true">↗</span><span data-i18n="security2Title">Your wallet stays yours</span></dt><dd data-i18n="security2Body">No wallet connections, funds, project-run forms, analytics or tracking scripts. GitHub Pages, the hosting provider, logs IP addresses for security.</dd></div>
+          <div><dt><span aria-hidden="true">↗</span><span data-i18n="security3Title">Authorities, disclosed</span></dt><dd data-i18n="security3Body">The DAY 04 mint and freeze authorities remain developer-controlled and unchanged. DAY 06 revocation tests used a separate disposable local mint.</dd></div>
           <div><dt><span aria-hidden="true">↗</span><span data-i18n="security4Title">Proof over promotion</span></dt><dd data-i18n="security4Body">No audit, exchange listing, liquidity lock or return is claimed. Local test evidence is documented separately from public Devnet results.</dd></div>
         </dl></div>
       </section>
 
-      <section id="risk" class="risk section-wrap" aria-labelledby="risk-title"><div class="risk-panel"><div class="risk-icon" aria-hidden="true">!</div><div><p class="eyebrow" data-i18n="riskEyebrow">BEFORE YOU GO ANY FURTHER</p><h2 id="risk-title" data-i18n="riskHeading">Know the risks. Keep your perspective.</h2><p data-i18n="riskBody">SEXY Coin is an experimental meme project, not investment advice or a guarantee of returns. Any future mainnet token could lose all of its value. Development may change or stop. Local and Devnet test tokens have no monetary value.</p><p class="risk-secondary" data-i18n="riskSecondary">There is no sale or fundraising. Legal and trademark reviews are pending; SEXY COIN and SEXY may be used by other projects. No exclusive rights to the name or symbol are claimed. Legal compliance review is required before any public sale or investment promotion in Türkiye.</p></div></div></section>
+      <section id="risk" class="risk section-wrap" aria-labelledby="risk-title"><div class="risk-panel"><div class="risk-icon" aria-hidden="true">!</div><div><p class="eyebrow" data-i18n="riskEyebrow">BEFORE YOU GO ANY FURTHER</p><h2 id="risk-title" data-i18n="riskHeading">Know the risks. Keep your perspective.</h2><p data-i18n="riskBody">SEXY Coin is an experimental meme project, not investment advice or a guarantee of returns. Any future mainnet token could lose all of its value. Development may change or stop. Local and Devnet test tokens have no monetary value.</p><p class="risk-secondary" data-i18n="riskSecondary">There is no sale or fundraising. Legal and trademark reviews are pending; SEXY COIN and SEXY are used by other projects; no affiliation is claimed. No exclusive rights to the name or symbol are claimed. Legal compliance review is required before any public sale or investment promotion in Türkiye.</p></div></div></section>
 
       <section id="community" class="community section-wrap section-space" aria-labelledby="community-title"><span class="community-star" aria-hidden="true">✦</span><p class="eyebrow" data-i18n="communityEyebrow">THE COMMUNITY STARTS WITH HONESTY</p><h2 id="community-title" data-i18n="communityHeading">Same energy. Future company.</h2><p data-i18n="communityBody">Official channels are not set up yet. We will add verified links here when they are ready.</p><div class="community-links"><button type="button" disabled><span>𝕏 / X</span><small data-i18n="notSetUp">NOT SET UP</small></button><button type="button" disabled><span>Telegram</span><small data-i18n="notSetUp">NOT SET UP</small></button><button type="button" disabled><span>Discord</span><small data-i18n="notSetUp">NOT SET UP</small></button></div><p class="fine-print" data-i18n="communityNote">Until then, treat accounts using this name as unverified. Never share a private key or recovery phrase.</p></section>
     </main>
 
     <footer class="site-footer section-wrap"><a class="wordmark footer-wordmark" href="#home"><span>SEXY<span class="wordmark-light">COIN</span><span class="wordmark-star" aria-hidden="true">✦</span></span></a><p><span data-i18n="footerBy">An experiment by</span> <strong>darklove</strong><span class="footer-year">© 2026</span></p><a href="#risk" data-i18n="footerRisk">Risk disclosure ↗</a><span class="footer-network"><span class="status-dot" aria-hidden="true"></span><span data-i18n="footerStatus">LOCAL COMPLETE · DEVNET PENDING</span></span></footer>
   </div>
-  <noscript><p class="noscript-note">English content is available without JavaScript. Türkçe dil seçimi ve mobil menü için JavaScript gerekir; bölüm bağlantıları: <a href="#about">Hakkında</a> · <a href="#tokenomics">Tokenomics</a> · <a href="#roadmap">Yol haritası</a> · <a href="#security">Şeffaflık</a> · <a href="#risk">Riskler</a>.</p></noscript>
+  <noscript><p class="noscript-note">English content is available without JavaScript. Türkçe dil seçimi ve mobil menü için JavaScript gerekir; bölüm bağlantıları: <a href="#about">Hakkında</a> · <a href="#tokenomics">Tokenomics</a> · <a href="#roadmap">Yol haritası</a> · <a href="#development-log">Gelişim kaydı / Build log</a> · <a href="#security">Şeffaflık</a> · <a href="#risk">Riskler</a>.</p></noscript>
 </body>
 </html>
