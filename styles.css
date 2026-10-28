@@ -29,3 +29,6 @@
 .log-identity{font-size:13px;line-height:1.8;max-width:850px;margin-top:24px;color:#cbb4d8}
 .log-risk-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:760px){.build-log-list{grid-template-columns:1fr;gap:14px;margin-top:28px}.log-card{padding:21px}.log-card h3{font-size:21px}.launch-gates{padding:21px}.launch-gates h3{font-size:22px}.launch-gates ul{grid-template-columns:1fr}.log-snapshot{font-size:12px}}
+
+/* DAY09: a purely recreational, memory-only arcade game. */
+.play-banner{display:flex;align-items:center;gap:15px;width:min(100%,380px);padding:14px 18px;border:1px solid #98618c;background:linear-gradient(110deg,#341a35,#22152f);border-radius:7px;margin-top:23px}.play-banner-heart{font-size:29px;color:var(--pink);line-height:1}.play-banner strong{display:block;font-size:14px;color:#fff0fc;line-height:1.4}.play-banner small{display:block;font-size:10px;line-height:1.5;color:#d7bedf;margin-top:3px}.play-banner>span:last-child{margin-left:auto;color:var(--pink);font-size:24px}.play-banner:hover{border-color:var(--pink)}@media(max-width:760px){.play-banner{padding:11px 14px;margin-top:21px}.play-banner strong{font-size:13px}}

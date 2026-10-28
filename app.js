@@ -57,6 +57,7 @@ Object.assign(translations.tr, {
   "log06Body": "Maliyetler, isim çakışmaları ve lansman koşulları incelendi. Yetki testleri yeni ve geçici bir yerel mintte yapıldı.",
   "log06Scope": "Mainnet: NO-GO. Satış, likidite veya kamuya açık dağıtım yok."
 });
+Object.assign(translations.tr, {playHeartRush:'Heart Rush oyna',playHeartNote:'30 saniye · yalnız oyun puanı'});
 const textElements = [...document.querySelectorAll('[data-i18n]')];
 const attributeElements = [...document.querySelectorAll('[data-i18n-aria],[data-i18n-alt]')];
 const english = Object.fromEntries(textElements.map(element => [element.dataset.i18n,element.innerText]));
@@ -86,6 +87,7 @@ function setLanguage(language) {
   for (const button of document.querySelectorAll('[data-language]')) button.setAttribute('aria-pressed',String(button.dataset.language === language));
   document.title = language === 'tr' ? 'SEXY Coin · Bir Solana Meme Deneyi' : 'SEXY Coin · Too Sexy to Be Serious';
   document.querySelector('meta[name="description"]').content = language === 'tr' ? 'SEXY Coin — darklove tarafından geliştirilen Solana meme deneyi. Yerel blockchain prototipi tamamlandı; kamuya açık Devnet bekliyor. Ana ağ tokenı veya satış yok.' : 'SEXY Coin — a Solana meme experiment by darklove. Local blockchain prototype complete; public Devnet pending. No mainnet token or sale.';
+  for (const link of document.querySelectorAll('[data-game-link]')) link.setAttribute('href','play/?lang='+language);
   setMenu(false);
 }
 for (const button of document.querySelectorAll('[data-language]')) button.addEventListener('click',() => setLanguage(button.dataset.language));
@@ -94,3 +96,5 @@ for (const link of mobileNav.querySelectorAll('a')) link.addEventListener('click
 document.addEventListener('keydown',event => { if (event.key === 'Escape' && !mobileNav.hidden) setMenu(false,true); });
 document.addEventListener('click',event => { if (!mobileNav.hidden && !event.target.closest('.site-header')) setMenu(false); });
 matchMedia('(min-width: 761px)').addEventListener('change',event => { if (event.matches) setMenu(false); });
+
+if (new URLSearchParams(location.search).get('lang') === 'tr') setLanguage('tr');

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100a18">
+  <meta name="description" content="SEXY HEART RUSH: a free 30-second arcade game. Catch hearts and stars. Just game points, no tokens or monetary rewards.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:title" content="SEXY HEART RUSH · 30 seconds. All heart.">
+  <meta property="og:description" content="A free arcade game from the SEXY Coin local prototype. Game points only. No Mainnet token, sale or monetary rewards.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://petrofi.github.io/sexy-coin-prototype/play/">
+  <meta property="og:image" content="https://petrofi.github.io/sexy-coin-prototype/assets/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://petrofi.github.io/sexy-coin-prototype/play/">
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js" defer></script>
+  <title>SEXY HEART RUSH · Free arcade game</title>
+</head>
+<body>
+  <a class="skip-link" href="#game" data-copy="skip">Skip to game</a>
+  <header class="header wrap">
+    <a class="brand" href="../"><img src="../assets/favicon.png" width="38" height="38" alt=""><span>SEXY COIN <small>ARCADE / 01</small></span></a>
+    <div class="header-right"><a class="home-link" href="../" data-copy="home">Back to the project ↗</a><div class="language" role="group" aria-label="Language"><button type="button" data-language="en" lang="en" aria-pressed="true">EN</button><span aria-hidden="true">/</span><button type="button" data-language="tr" lang="tr" aria-pressed="false">TR</button></div></div>
+  </header>
+  <main class="layout wrap">
+    <section class="intro" aria-labelledby="game-title">
+      <p class="eyebrow" data-copy="eyebrow">A LITTLE REFLEX. A LOT OF HEART.</p>
+      <h1 id="game-title"><span class="sexy">SEXY</span>HEART<br><span class="pink">RUSH</span><span class="title-star" aria-hidden="true">✦</span></h1>
+      <p class="lead" data-copy="lead">30 seconds. Catch the hearts. Dodge the trouble. Make your own high score.</p>
+      <div class="mascot-lockup"><img class="intro-mascot" src="../assets/mascot-480.webp" width="480" height="480" alt="Approved pink-haired SEXY Coin mascot" data-alt="mascot"><span class="orbit-label" data-copy="mascotLabel">YOUR HEART-CATCHING SIDEKICK</span></div>
+      <ul class="legend" aria-label="Scoring"><li><span class="heart-symbol" aria-hidden="true">♥</span><span data-copy="heart">Heart</span><strong>+10</strong></li><li><span class="star-symbol" aria-hidden="true">✦</span><span data-copy="star">Star</span><strong>+25</strong></li><li><span class="obstacle-symbol" aria-hidden="true">◆</span><span data-copy="obstacle">Obstacle</span><strong>−10</strong></li></ul>
+      <p id="controls-note" class="controls-note" data-copy="instructions">Move with ← → or A / D. Mouse: move over the arena. Touch: drag in the arena or hold the arrow buttons. Space / P: pause. F: fullscreen; Esc: leave.</p>
+      <p class="quiet" data-copy="focusNote">Keyboard player? Tab to the game, then use the arrow keys. You can pause at any time.</p>
+    </section>
+    <section id="game" class="game-column" aria-label="Heart Rush game">
+      <div class="game-card" id="game-card">
+        <div class="hud"><div><span data-copy="score">Score</span><strong id="score">0</strong></div><div class="timer-block"><span data-copy="time">Time</span><strong id="timer">30.0<span>s</span></strong></div><div><span data-copy="best">Session best</span><strong id="best">—</strong></div></div>
+        <div class="arena" id="arena">
+          <canvas id="field" width="720" height="900" tabindex="0" role="img" aria-label="Heart Rush game arena. Move left and right to catch falling items." aria-describedby="controls-note accessibility-note"></canvas>
+          <div class="overlay" id="overlay">
+            <div class="panel" id="ready-panel"><p class="eyebrow" data-copy="readyEyebrow">30 SECONDS. ALL HEART.</p><h2 data-copy="readyTitle">Ready for<br>the rush?</h2><p data-copy="readyBody">Pink hearts, golden stars, a little trouble. Your sidekick is ready.</p><button type="button" id="start-btn" class="primary" disabled data-copy="loading">Loading mascot…</button><p class="panel-note" data-copy="onlyPoints">Just game points. Nothing to buy or earn.</p></div>
+            <div class="panel" id="paused-panel" hidden><p class="eyebrow" data-copy="pausedEyebrow">ON PAUSE</p><h2 data-copy="pausedTitle">Take a breath.</h2><p data-copy="pausedBody">The timer is paused. Pick up right where you left off.</p><button type="button" id="resume-btn" class="primary" data-copy="resume">Keep playing</button></div>
+            <div class="panel end-panel" id="ended-panel" hidden><p class="eyebrow" data-copy="endedEyebrow">TIME'S UP!</p><h2 data-copy="endedTitle">That was<br>all heart.</h2><p data-copy="yourScore">Your score</p><strong class="final-score" id="final-score">0</strong><p id="round-summary" class="round-summary"></p><button type="button" id="replay-btn" class="primary" data-copy="again">Play again ↗</button><p class="panel-note" data-copy="onlyPoints">Just game points. Nothing to buy or earn.</p></div>
+          </div>
+        </div>
+        <div class="game-controls"><div class="move-buttons" role="group" aria-label="Move"><button type="button" id="left-btn" aria-label="Move left" data-aria="left">←</button><button type="button" id="right-btn" aria-label="Move right" data-aria="right">→</button></div><div class="utility-buttons"><button type="button" id="pause-btn" disabled data-copy="pause">Pause</button><button type="button" id="fullscreen-btn" aria-label="Toggle fullscreen" data-aria="fullscreen">⛶</button></div></div>
+      </div>
+      <p id="accessibility-note" class="quiet access-note" data-copy="accessNote">Focus the arena to play with the keyboard. Item scores and the final result are announced. This is a visual reflex game.</p>
+      <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+      <p class="trust-note"><span class="status-dot" aria-hidden="true"></span><span data-copy="trust">GAME POINTS ONLY · NO MONETARY REWARDS</span></p>
+    </section>
+  </main>
+  <footer class="footer wrap"><p data-copy="prototype">SEXY Coin remains a local prototype. No Mainnet token, sale or wallet connection.</p><p data-copy="privacy">No accounts, cookies or analytics. Scores stay in this page's memory and reset on reload. GitHub Pages logs IP addresses for hosting security.</p><a href="../#risk" data-copy="risks">Project risk disclosure ↗</a></footer>
+  <noscript><p class="noscript">This game needs JavaScript. Bu oyun için JavaScript gerekir. <a href="../">Back to the project / Projeye dön</a></p></noscript>
+</body>
+</html>
