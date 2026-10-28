@@ -187,6 +187,6 @@
     pc.drawImage(image,135*scale,12*scale,691.2*scale,960*scale,0,0,144,200);
     assetsReady=true;$('#start-btn').disabled=false;$('#start-btn').dataset.copy='start';$('#start-btn').textContent=t('start');render();
   };
-  image.onerror=()=>{$('#start-btn').textContent=t('loadError');announce(t('loadError'));};image.src='../assets/mascot-768.png';
+  image.onerror=()=>{$('#start-btn').textContent=t('loadError');announce(t('loadError'));};image.src='../assets/mascot-768.webp';
   requestAnimationFrame(tick);
 })();
